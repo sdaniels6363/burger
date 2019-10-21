@@ -14,7 +14,7 @@ var burger = {
     });
   },
   updateDevoured: function(colToUpdate,boolean,whereField,value, cb) {
-    orm.updateOne("burgers", colToUpdate, boolean, whereField, value function(res) {
+    orm.updateOne("burgers", colToUpdate, boolean, whereField, value, function(res) {
       cb(res);
     });
   }
