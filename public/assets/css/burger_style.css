@@ -1,3 +1,38 @@
 button.change-state{
     float: right;
 }
+
+nav{
+    text-align: center;
+}
+
+body{
+    background-color: hsl(44, 100%, 50%);
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #000000;
+    text-align: center;
+}
+
+.container{
+    padding-bottom: 100px;
+}
+
+#center-col{
+    text-align: center;
+}
+
+#credit-link, #credit-link:hover{
+    text-decoration: none;
+    color: #ffffff;
+
+}
+
+#burger{
+    min-width: 300px;
+    max-width: 300px;
+}
