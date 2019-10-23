@@ -12,7 +12,7 @@ var orm = {
     
     // add a new burger to the database.
     insertOne: function(table,colName,value , cb){
-        var query = `INSERT INTO ${table} (${colName}) VALUES ${value}`
+        var query = `INSERT INTO ${table} (${colName}) VALUES ('${value}');`
         connection.query(query, function(err, data){
             if (err) throw err;
             cb(data);
