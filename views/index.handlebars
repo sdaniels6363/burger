@@ -9,7 +9,7 @@
       {{#each burgers}}
       {{#unless devoured}}
       <div class="burgers my-3">
-        <p>{{burger_name}}</p>
+        {{burger_name}}
         <button class="btn btn-warning change-state" data-devoured="false" id="{{id}}">Devour Burger!</button>
       </div>
       {{/unless}}
@@ -25,7 +25,7 @@
       {{#each burgers}}
       {{#if devoured}}
       <div class="burgers my-3">
-         <p>{{burger_name}}</p>
+        {{burger_name}}
         <button class="btn btn-warning change-state" data-devoured="true" id="{{id}}">Make Another!</button>
       </div>
       {{/if}}
@@ -33,3 +33,15 @@
     </div>
   </div>
 </div>
+
+
+{{!-- row
+  col-md-12
+    row
+      col-md-4 - devoured
+      col-md-4 
+        row-1
+          col-md-12 - burger icon
+        row-2      
+          col-md-12 - input form
+      col-md-4 - remake --}}
