@@ -5,6 +5,21 @@
 
 $(document).ready(function () {
 
+    $(document).on("click","#addBurger", (event) => {
+        event.preventDefault();
+        // this function adds the new burger
+        let params = {
+            method: "POST",
+            data: {
+                burgerName: $("#newBurger").val()
+            }
+        }
+        $.ajax(`/api/burgers`, params).then((response)=>{
+            // console.log(response);
+            location.reload();
+        });
+    })
+
     $(document).on("click", ".change-state", (event) => {
         event.preventDefault();
         // this function submits the put for the devoured state
@@ -25,10 +40,9 @@ $(document).ready(function () {
         }
 
         $.ajax(`/api/burgers/${id}`, params).then((response) => {
-            console.log(response);
+            // console.log(response);
+            location.reload();
         })
-        location.reload();
-
 
     });
 
