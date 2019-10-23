@@ -10,15 +10,15 @@ router.get("/", function (req, res) {
     var dbObject = {
       burgers: data
     };
-    console.log(dbObject);
     res.render("index", dbObject);
   });
 });
 
 router.post("/api/burgers", function (req, res) {
+  console.log(req.body.burgerName);
   burger.addBurger("burger_name", req.body.burgerName, function (result) {
-    // Send back the ID of the new quote
-    res.json({ id: result.id }); // this will be stored in the data element of the devour button.
+    console.log(result);
+    res.status(204).end();
   });
 });
 
